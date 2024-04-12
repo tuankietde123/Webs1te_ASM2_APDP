@@ -1,0 +1,34 @@
+﻿@page
+@model Webs1te.Pages.Clients.IndexModel
+@{
+}
+
+<br>
+<h2>List of Student</h2>
+
+<a class='btn btn-secondary btn-sm' href='/Account/Logout'>Log Out</a>
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Phone</th>
+            <th>Address</th>
+            <th>Create At</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.listClients)
+        {
+            <tr>
+                <td>@item.id</td>
+                <td>@item.name</td>
+                <td>@item.course</td>
+                <td>@item.phone</td>
+                <td>@item.address</td>
+                <td>@item.creat_at</td>
+            </tr>
+        }
+    </tbody>
+</table>
